@@ -20,7 +20,13 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
-
+    command: >
+      sh -c "
+        if [ ! -f config/db.php ]; then
+          cp config/db.php.example config/db.php
+        fi &&
+        docker-php-entrypoint php-fpm
+      "
   db:
     image: mariadb:10.3
     container_name: short_url_db
