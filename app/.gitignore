@@ -1,0 +1,43 @@
+# IDE and editor files
+.ideanbproject/
+.buildpath
+.project
+.settings
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Composer dependencies
+/vendor/
+
+# Composer binary
+composer.phar
+
+# PHPUnit
+phpunit.phar
+/phpunit.xml
+tests/_output/*
+tests/_support/_generated
+
+# Vagrant
+/.vagrant
+
+# Yii2 specific
+/runtime/*
+!runtime/.gitkeep
+/web/assets/*
+!/web/assets/.gitkeep
+/web/css/*
+!/web/css/.gitkeep
+
+# Environment specific configs
+.env
+config/db.php
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+*.tmp
